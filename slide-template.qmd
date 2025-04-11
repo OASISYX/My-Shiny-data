@@ -1,0 +1,789 @@
+---
+title: "UCDP GED Dataset And Related Studies"
+subtitle: Group 4
+author: "YANG XI, YANG QIANYU, WANG YIFAN, LU YU, LI JIONGLIN"
+format:
+  revealjs:
+    revealjs:
+    chalkboard: 
+      buttons: false
+    width: 1200  
+    height: 900
+    slide-number: true
+    preview-links: auto 
+    logo: UM-Logo_V-Black.png
+    highlight-style: arrow
+    theme: ["custom.scss"]
+    auto-stretch: true
+editor: visual
+date: today
+---
+
+## What is the UCDP GED?
+
+::: {.fragment .fade-in}
+The [**UCDP Georeferenced Event Dataset**]{style="color:#08d9d6"} (Global version 24.1) is the ***most detailed*** conflict dataset produced by Uppsala University. It disaggregates three types of organized violence both [**spatially and temporally worldwide**]{style="color:#08d9d6"} from 1989 to 2023.
+:::
+
+::: {.fragment .fade-in}
+#### **Types of Violence:**
+
+-   **State-based conflict**: Violence between two organized actors of which at least one is the government of a state.
+-   **Non-state conflict**: Violence between actors of which neither party is the government of a state.
+-   **One-sided violence**: Violence against unarmed civilians perpetrated by organized non-state groups or governments.
+
+#### **Three core components:**
+
+-   Event Data
+-   Geographic Dimensions
+-   Temporal Dimensions
+:::
+
+## Event Data
+
+::: {.fragment .fade-in}
+The incidence of the [**use of armed force**]{style="color:#08d9d6"} by an organized actor against another organized actor or against civilians, resulting in [**at least 1 direct death**]{style="color:#08d9d6"} in either the best, low or high estimate categories at a specific location and for a specific temporal duration.
+:::
+
+::: {.fragment .fade-in}
+#### Core Identifiers:
+
+-   **id:** A unique numeric ID identifying each event.
+
+-   **dyad_name:** Name of the conflict dyad creating the event (e.g., Government of Russia - Caucasus Emirate, Taleban - civilians).
+
+-   **side_a/b:** A unique ID of side A/B.
+
+-   **side_a/b_new_id:** The name of Side A/B in the dyad.
+:::
+
+## Geographical Location
+
+::: {.fragment .fade-in}
+The dataset employs [**geospatial standards World Geodetic System 1984**]{style="color:#08d9d6"} (WGS84). The team supplements this with:Digital mapping tools,UN humanitarian data,Local government maps, Historical archives.
+:::
+
+::: {.fragment .fade-in}
+#### Core Identifiers:
+
+-   **latitude & longitude**
+
+-   **country:** Name of the country where the event takes place.
+
+-   **country_id:** Gleditsch and Ward number of the country.
+
+-   **region:** Region where the event took place.
+
+-   **adm_1/2:** Name of the first/second order administrative division.
+:::
+
+## Temporal Dimension
+
+::: {.fragment .fade-in}
+The dataset captures temporal dimensions with:
+
+-   **date_start**: The earliest possible date when the event occurred.
+
+-   **date_end:** The last possible date when the event occurred.
+:::
+
+::: {.fragment .fade-in}
+**The three categories are:**
+
+1.  Discrete **single-day** incidents
+
+2.  Continuous **multi-day** engagements
+
+3.  Aggregate summaries for **prolonged** violence
+:::
+
+# Climate Vulnerability-Conflict Risk Matrix Analysis
+
+-   [**Rationale**]{style="color:#08d9d6"}: United Nations Environment Programme indicates that climate change may exacerbate competition for resources, thereby triggering conflict.
+
+-   [**Innovation point**]{style="color:#08d9d6"}: Combining traditional conflict analysis with climate risk indicators to test the geographical distribution of the "climate-conflict" hypothesis.
+
+## Climate Vulnerability-Conflict Risk Matrix {style="center"}
+
+```{=html}
+<iframe width=100% height="650px" style="display: block; margin: 0 auto; border:none;" src="https://floatingoasis.shinyapps.io/finalgraph/"></iframe>
+```
+
+by YANG XI(Climate Vulnerability Index from *ND-GAIN Country Index*)
+
+## Core visual elements
+
+| Element | Indicate | Analysis |
+|------------------------|------------------------|------------------------|
+| x-axis | Climate Vulnerability Index | Higher values indicate weaker capacity to cope with climate change |
+| y-axis | Conflict fatalities (logarithmic scale) | Core indicators for measuring conflict intensity |
+| Bubble Color | Country | Distinguishing between different country cases |
+| Bubble Size | GDP per capita (US\$) | Characterising the level of economic development |
+
+## Macro Perspective
+
+-   Data show a [**significant positive correlation**]{style="color:#08d9d6"} between climate vulnerability and conflict intensity.
+
+-   The lower left corner ([**low vulnerability x low conflict**]{style="color:#08d9d6"}) tending to be a large bubble(Reflecting the buffering effect of economic power on climate adaptation) and the upper right corner ([**high vulnerability x high conflict**]{style="color:#08d9d6"}) tending to be a small bubble(Reflecting the vicious circle of "climate-poverty-conflict").
+
+## Micro Perspective (grouped by country)
+
+**① Developed country case (United States) :**
+
+::: incremental
+-   United States :
+
+    -   Bubble position: [**Low Vulnerability**]{style="color:#08d9d6"} x [**Low Conflict**]{style="color:#08d9d6"}
+
+    -   Bubble size : [**Big Bubble**]{style="color:#08d9d6"},Typical developed country case
+:::
+
+② **Emerging economies (South Africa / China / Brazil) :**
+
+::: incremental
+-   Middle Ground Countries:
+
+    -   South Africa:
+
+        -   Bubble position: [**Medium-high Vulnerability**]{style="color:#08d9d6"} × [**Conflict Volatility**]{style="color:#08d9d6"} (Vulnerability edges down, but conflict remains high)
+:::
+
+## Micro Perspective (grouped by country)
+
+② **Emerging economies (South Africa / China / Brazil) :**
+
+::: incremental
+-   Middle Ground Countries:
+
+    -   China:
+
+        -   Bubble position: [**Medium Vulnerability**]{style="color:#08d9d6"} × [**Low Conflict**]{style="color:#08d9d6"} (shifting towards the lower left year by year)
+
+        -   Bubble size: The size of the bubbles gets bigger every year.[**Economy of scale reduces physical vulnerability through infrastructure investments**]{style="color:#08d9d6"} (e.g. flood defence projects).
+:::
+
+## Micro Perspective (grouped by country)
+
+② **Emerging economies (South Africa / China / Brazil) :**
+
+::: incremental
+-   Middle Ground Countries:
+
+    -   Brazil:
+
+        -   Bubble position: [**Medium-high Vulnerability**]{style="color:#08d9d6"} × [**Conflict Volatility**]{style="color:#08d9d6"} (vertical up shift 2016-2022)
+
+            -   **2017-2019**: Increased deforestation in the Amazon rainforest → Rural land conflict erupts.
+
+            -   **2020-2022**: Climate policy pullback (declining vulnerability) but historical conflict inertia persists(landmark2020: Conflicts in protected areas in the Amazon)
+:::
+
+## Micro Perspective (grouped by country)
+
+③ **Upper right high-risk area(India/Nigeria) :**
+
+::: incremental
+-   India:
+
+    -   Bubble position: [**High vulnerability**]{style="color:#08d9d6"} × [**Medium-high**]{style="color:#08d9d6"} [**conflict**]{style="color:#08d9d6"} (on the upper right side of the matrix but below Nigeria)
+
+    -   Bubble size: [**Rapid economic growth**]{style="color:#08d9d6"} (Bubble size up) but [**lagging climate adaptation**]{style="color:#08d9d6"}
+
+        -   Urbanisation exacerbates the heat island effect
+:::
+
+## Micro Perspective (grouped by country)
+
+③ **Upper right high-risk area(India/Nigeria) :**
+
+::: incremental
+-   Nigeria:
+
+    -   Bubble position: [**High vulnerability**]{style="color:#08d9d6"} × [**High** **conflict**]{style="color:#08d9d6"}
+
+    -   Bubble size: [**Economic growth**]{style="color:#08d9d6"} (Bubble size up) but [**Conflict growth**]{style="color:#08d9d6"} too.
+
+        -   GDP growth is concentrated in the oil industry (90 per cent of exports), however:
+
+            -   Marginalisation of the Northern Agricultural Zone → Farmer-Pastoralist Conflicts Surge
+
+            -   Uneven Distribution of Oil Revenues → Niger Delta Armed Groups Escalate Activities
+:::
+
+# The Adverse Impact of Mexico's Counter-narcotics Policies on Drug-Related Conflicts
+
+-   [**Rationale**]{style="color:#08d9d6"}: Utilizes the GED dataset to analyze violent conflicts among Mexico’s criminal organizations between 2006 and 2023, examining the patterns and geographic distribution of conflicts and alliances before and after shifts in presidential drug cartel policies.
+
+## Actions and Results: {.scrollable}
+
+#### **Felipe de Jesús Calderón Hinojosa (2006-2012)**
+
+-   Launched military operations
+-   Extradited cartel leaders
+
+**Results:**
+
+-   Violence surged by [**786%**]{style="color:#08d9d6"} (670 homicides in 2006 → 5,936 in 2012)
+-   [**Highest** single-event death toll]{style="color:#08d9d6"}: 1,346 fatalities (Juarez vs Sinaloa Cartel, 2009)
+-   [**Small-scale, dispersed**]{style="color:#08d9d6"} conflicts mainly in border areas and southwest
+-   Major organizations: Beltrán Leyva,Gulf,Jalisco Cartels, Los Zetas, Sinaloa
+
+#### **Enrique Peña Nieto (2012-2018)**
+
+-   Continued militarization
+-   Captured "El Chapo" in 2016
+
+**Results:**
+
+-   Yearly deaths [**exceeded 10,000**]{style="color:#08d9d6"} for the first time (2018)
+
+-   More decentralized organizations, fewer but [**deadlier**]{style="color:#08d9d6"} events
+
+-   Conflicts concentrated toward [**Gulf of Mexico and southwest**]{style="color:#08d9d6"}
+
+#### Andrés Manuel López Obrador (2018-2023)
+
+-   "Hugs not bullets" policy but increased military budget
+-   Created National Guard
+
+**Results:**
+
+-   16,934 violent deaths in 2021 which was the [**highest**]{style="color:#08d9d6"} record among these
+
+-   Further clustering in key areas: Sinaloa vs CJNG in [**Tijuana**]{style="color:#08d9d6"} and Jalisco vs Zetas in [**Veracruz**]{style="color:#08d9d6"}
+
+#### Conclusion:
+
+**“Mexico's stringent counter-narcotics policies had inadvertently contributed to the fragmentation of drug trafficking organizations, leading to an escalation in both the intensity and frequency of localized conflicts.”**
+
+## Interactive Graph
+
+```{=html}
+<iframe width=120% height="720px" src="https://gpad3019.shinyapps.io/Mexico/"></iframe>
+```
+
+Made by YANG QIANYU
+
+## Core Visual Elements {.scrollable}
+
+| Element | Meaning | Purpose |
+|------------------------|------------------------|------------------------|
+| Time Period | Terms of office of three presidents from different parties | Reveal observe the temporal variation characteristics of conflict patterns across different policy periods |
+| Conflict Parties | The two sides in conflict | Reveal characteristic variations in the numerical patterns of conflicting parties across different policy periods |
+| Fatalities Range | Variation range of individual conflict magnitudes | Filter conflict types based on their intensity levels. |
+| Bubble Size | Fatalities numbers | Characterising the level of conflict intensity and geographic distribution |
+
+# 2021 Myanmar coup d'état and Myanmar civil war
+
+## Background
+
+The Myanmar Civil War is an ongoing conflict triggered by the military’s February 2021 coup, which overthrew the democratically elected government led by Aung San Suu Kyi’s National League for Democracy (NLD). The coup ignited nationwide protests, which evolved into armed resistance as the military junta (State Administration Council, or SAC) cracked down violently.
+
+#### State-based violence
+
+#### One-sided violence
+
+## Conflict map after 2021 Myanmar coup d'état {.scrollable}
+
+Number on cluster stands for casualties
+
+```{r}
+#| echo: false
+# Load required packages
+pacman::p_load(tidyverse, sf, leaflet, crosstalk, here, htmltools, leaflet.extras, viridis)
+
+# Read and preprocess data with error handling
+data <- tryCatch({
+  read_csv(here("Data/gedevents-2025-04-07.csv")) %>%
+    filter(!is.na(latitude), !is.na(longitude)) %>%
+    mutate(
+      date_start = as.Date(date_start, format = "%m/%d/%Y %H:%M:%S"),
+      type_of_violence = factor(type_of_violence,
+                               levels = 1:3,
+                               labels = c("State-Based", "Non-State", "One-Sided")),
+      popup_content = paste(
+        "<b>Source article:</b>", htmlEscape(source_article), "<br>",
+        "<b>Dyad name:</b>", htmlEscape(dyad_name), "<br>",
+        "<b>Date:</b>", format(date_start), "<br>",
+        "<b>Location:</b>", htmlEscape(where_description), "<br>",
+        "<b>Casualties:</b>", scales::comma(best_est)
+      )
+    ) |> 
+    filter(date_start >= as.Date("2021-02-01"))
+}, error = function(e) {
+  stop("Error loading or processing data: ", e$message)
+})
+
+v1 <- data |> 
+  filter(type_of_violence == "State-Based")
+v2 <- data |> 
+  filter(type_of_violence == "Non-State")
+v3 <- data |> 
+  filter(type_of_violence == "One-Sided")
+
+# Simplify administrative boundaries for better performance
+simplify_geoms <- function(sf_obj) {
+  st_simplify(sf_obj, dTolerance = 0.001, preserveTopology = TRUE)
+}
+
+admin1 <- st_read(here("Data/gadm41_MMR_shp/gadm41_MMR_1.shp"), quiet = TRUE) %>% simplify_geoms()
+admin2 <- st_read(here("Data/gadm41_MMR_shp/gadm41_MMR_2.shp"), quiet = TRUE) %>% simplify_geoms()
+admin3 <- st_read(here("Data/gadm41_MMR_shp/gadm41_MMR_3.shp"), quiet = TRUE) %>% simplify_geoms()
+
+# Create accessible color palette
+violence_pal <- colorFactor(
+  palette = viridis(3),
+  domain = data$type_of_violence
+)
+
+# Create base map with performance optimizations
+base_map <- leaflet(width = "100%", height = "800px", options = leafletOptions(preferCanvas = TRUE)) %>%
+  setView(lng = 96, lat = 21, zoom = 6) %>%
+  addProviderTiles(providers$CartoDB.Positron) %>%
+  addPolygons(
+    data = admin1,
+    color = "#444444",
+    weight = 1,
+    fill = FALSE,
+    group = "State Boundaries",
+    label = ~NAME_1,
+    highlightOptions = highlightOptions(weight = 3, color = "black")
+  ) %>%
+  addPolygons(
+    data = admin2,
+    color = "#E69F00",
+    weight = 1,
+    fill = FALSE,
+    group = "District Boundaries",
+    highlightOptions = highlightOptions(weight = 3, color = "black")
+  ) %>%
+  addPolygons(
+    data = admin3,
+    color = "#009E73",
+    weight = 1,
+    fill = FALSE,
+    group = "Sub-District Boundaries",
+    highlightOptions = highlightOptions(weight = 3, color = "black")
+  ) %>%
+  addScaleBar(position = "bottomleft")
+
+# Enhanced conflict markers with dual visualization
+final_map <- base_map %>%
+  addCircleMarkers(
+    data = v1,
+    lat = ~latitude,
+    lng = ~longitude,
+    radius = ~scales::rescale(sqrt(best_est + 1), to = c(10, 50)),
+    stroke = FALSE,
+    fillColor = ~violence_pal(type_of_violence),
+    fillOpacity = 0.7,
+    options = list(best_est = ~best_est),
+    clusterOptions = markerClusterOptions(
+      spiderfyOnMaxZoom = TRUE,
+      showCoverageOnHover = FALSE,
+      iconCreateFunction = JS("
+        function(cluster) {
+          var markers = cluster.getAllChildMarkers();
+          var sum = 0;
+          for (var i = 0; i < markers.length; i++) {
+            var best_est = markers[i].options.best_est;
+            if (typeof best_est === 'number') {
+              sum += best_est;
+            }
+          }
+          var className = 'marker-cluster ';
+          if (sum < 100) {
+            className += 'marker-cluster-small';
+          } else if (sum < 1000) {
+            className += 'marker-cluster-medium';
+          } else {
+            className += 'marker-cluster-large';
+          }
+          return L.divIcon({
+            html: '<div><span>' + sum.toLocaleString() + '</span></div>',
+            className: className,
+            iconSize: L.point(40, 40)
+          });
+        }
+      ")
+    ),
+    popup = ~popup_content,
+    group = "State-Based"
+  ) |> 
+  addCircleMarkers(
+    data = v2,
+    lat = ~latitude,
+    lng = ~longitude,
+    radius = ~scales::rescale(sqrt(best_est + 1), to = c(10, 50)),
+    stroke = FALSE,
+    fillColor = ~violence_pal(type_of_violence),
+    fillOpacity = 0.7,
+    options = list(best_est = ~best_est),
+    clusterOptions = markerClusterOptions(
+      spiderfyOnMaxZoom = TRUE,
+      showCoverageOnHover = FALSE,
+      iconCreateFunction = JS("
+        function(cluster) {
+          var markers = cluster.getAllChildMarkers();
+          var sum = 0;
+          for (var i = 0; i < markers.length; i++) {
+            var best_est = markers[i].options.best_est;
+            if (typeof best_est === 'number') {
+              sum += best_est;
+            }
+          }
+          var className = 'marker-cluster ';
+          if (sum < 100) {
+            className += 'marker-cluster-small';
+          } else if (sum < 1000) {
+            className += 'marker-cluster-medium';
+          } else {
+            className += 'marker-cluster-large';
+          }
+          return L.divIcon({
+            html: '<div><span>' + sum.toLocaleString() + '</span></div>',
+            className: className,
+            iconSize: L.point(40, 40)
+          });
+        }
+      ")
+    ),
+    popup = ~popup_content,
+    group = "Non-State"
+  ) |> 
+  addCircleMarkers(
+    data = v3,
+    lat = ~latitude,
+    lng = ~longitude,
+    radius = ~scales::rescale(sqrt(best_est + 1), to = c(10, 50)),
+    stroke = FALSE,
+    fillColor = ~violence_pal(type_of_violence),
+    fillOpacity = 0.7,
+    options = list(best_est = ~best_est),
+    clusterOptions = markerClusterOptions(
+      spiderfyOnMaxZoom = TRUE,
+      showCoverageOnHover = FALSE,
+      iconCreateFunction = JS("
+        function(cluster) {
+          var markers = cluster.getAllChildMarkers();
+          var sum = 0;
+          for (var i = 0; i < markers.length; i++) {
+            var best_est = markers[i].options.best_est;
+            if (typeof best_est === 'number') {
+              sum += best_est;
+            }
+          }
+          var className = 'marker-cluster ';
+          if (sum < 100) {
+            className += 'marker-cluster-small';
+          } else if (sum < 1000) {
+            className += 'marker-cluster-medium';
+          } else {
+            className += 'marker-cluster-large';
+          }
+          return L.divIcon({
+            html: '<div><span>' + sum.toLocaleString() + '</span></div>',
+            className: className,
+            iconSize: L.point(40, 40)
+          });
+        }
+      ")
+    ),
+    popup = ~popup_content,
+    group = "One-Sided"
+  ) 
+
+# Add advanced controls and features
+final_map <- final_map %>%
+  addLayersControl(
+    baseGroups = c("State-Based", "Non-State", "One-Sided"),
+    overlayGroups = c("State Boundaries", "District Boundaries", 
+                     "Sub-District Boundaries"),
+    options = layersControlOptions(collapsed = FALSE)
+  ) %>%
+  addLegend(
+    position = "bottomright",
+    pal = violence_pal,
+    values = data$type_of_violence,
+    title = "Type of Violence",
+    opacity = 1
+  ) %>%
+  addResetMapButton() %>%
+  addFullscreenControl() %>%
+  addMeasure(
+    position = "topleft",
+    primaryLengthUnit = "kilometers"
+  )  
+# Display the map
+final_map
+```
+
+Made by WANG Yifan
+
+# Colombia Conflict Analysis
+
+## Background: {.scrollable}
+
+-   Colombia is the world's largest cocaine producer. According to the data from UNODC(<https://dataunodc.un.org/>):
+
+    ```{r}
+    #| echo: false
+
+    pacman::p_load(tidyverse, here)
+     
+    colombia <- read.csv("Data/colombia_coca.csv")
+    colombia$Hectares <- as.numeric(gsub(",", "", colombia$Hectares))
+
+    ggplot(data = colombia, aes(x = Year, y = Hectares)) +
+      geom_line(color = "#2c7fb8", size = 1) + 
+      geom_point(color = "#f03b20", size = 3) +
+      geom_text(aes(label = Hectares), vjust = -0.8, size = 3, color = "black") +
+      scale_x_continuous(breaks = seq(min(colombia$Year), max(colombia$Year), by = 1)) +
+      labs(
+        title = "Cultivation of Coca Bush (2010–2022)",
+        subtitle = "Area cultivated per year (in hectares)",
+        x = "Year",
+        y = "Hectares"
+      ) +
+      theme_classic() +
+      theme(
+        plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+        plot.subtitle = element_text(size = 12, hjust = 0.5),
+        axis.title = element_text(size = 12),
+        axis.text = element_text(size = 10)
+      )
+    ```
+
+<!-- -->
+
+-   According to the data from GEDEvent:
+
+    ```{r}
+    #| echo: false
+
+    ggplot(data = colombia, aes(x = Year, y = Conflicts)) +
+      geom_line(color = "#2c7fb8", size = 1) + 
+      geom_point(color = "#f03b20", size = 3) +
+      geom_text(aes(label = Conflicts), vjust = -0.8, size = 3, color = "black") +
+      scale_x_continuous(breaks = seq(min(colombia$Year), max(colombia$Year), by = 1)) +
+      labs(
+        title = "Conflicts in Colombia (2010–2022)",
+        subtitle = "Number of armed conflict incidents",
+        x = "Year",
+        y = "Conflicts"
+      ) +
+      theme_classic() +
+      theme(
+        plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+        plot.subtitle = element_text(size = 12, hjust = 0.5),
+        axis.title = element_text(size = 12),
+        axis.text = element_text(size = 10)
+      )
+    ```
+
+#### On the one hand, coca cultivation is expanding; on the other hand, conflict and violence are increasing.
+
+## Correlation： {.scrollable}
+
+-   The fluctuations of the two appear to have some similarities.
+
+-   Next, we use a scatter plot to see whether there is a correlation between planting area and conflict.
+
+```{r}
+#| echo: false
+
+ggplot(data = colombia, aes(x = Hectares, y = Conflicts, color = Year)) + 
+  geom_point(size = 3) +  
+  geom_text(aes(label = Year), vjust = -1, size = 3.5, color = "black", show.legend = FALSE) +  
+  scale_color_gradient(low = "#f03b20", high = "#0570b0") +
+  labs(
+    title = "Relationship Between Coca Cultivation and Conflict Incidents",
+    subtitle = "Color gradient shows year progression (2010–2022)",
+    x = "Coca Cultivation Area (Hectares)",
+    y = "Number of Conflict Incidents",
+    color = "Year"
+  ) +
+  theme_classic() +
+  theme(
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(size = 12, hjust = 0.5),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10),
+    legend.position = "right"
+  )
+
+```
+
+## Causation: {.scrollable}
+
+-   Through Granger Causality, let's make sure the independent variable and dependent variable.
+
+    ```{r}
+    pacman::p_load(lmtest, vars, tsibble, tseries)
+
+    colombia_ts <- ts(colombia[, c("Hectares", "Conflicts")], start = c(2010), frequency = 1)
+
+    lag_select <- VARselect(colombia_ts, lag.max = 5, type = "const")
+
+    lag_select$selection
+
+    # To test whether changes in coca bush cultivation can predict the changes in the number of conflicts.
+    # order = 1 means using lag 1 in the Granger Causality Test (i.e. using the previous year's Hectares data to predict the current Conflicts).
+    granger_test_1 <- grangertest(Conflicts ~ Hectares, order = 1, data = colombia_ts)
+    print(granger_test_1)
+
+    granger_test_2 <- grangertest(Hectares ~ Conflicts, order = 1, data = colombia_ts)
+    print(granger_test_2)
+    ```
+
+-   **asterisk \*: 0.0142,** so the area of coca bush is the X.
+
+-   **Shortage:** N=13. The model is not stable enough.
+
+# Afghanistan Conflict Analysis
+
+## Background {.scrollable}
+
+### Initial Invasion (2001)
+
+·After the 9/11 attacks, the U.S. demanded the Taliban hand over Osama bin Laden. The Taliban refused.
+
+·On October 7, 2001, the U.S. launched *Operation Enduring Freedom* with support from the Northern Alliance, leading to the collapse of the Taliban regime.
+
+### Nation-Building and Counterinsurgency (2002–2008)
+
+·The Taliban began to re-emerge, especially in the southern and border regions.
+
+·The U.S. shifted its goals from counter terrorism to broader aims of democratization and state-building.
+
+## Background {.scrollable}
+
+### Strategic Shift and U.S. Troop Surge (2009–2014)
+
+·The Obama administration increased U.S. troop levels to over 100,000.
+
+·Launched a "clear-hold-build" strategy.
+
+·In 2011, bin Laden was killed in Pakistan.
+
+### **Transition and Gradual Withdrawal (2015–2020)**
+
+·U.S. forces shifted to training and air support roles.
+
+·The Taliban continued to expand, gaining control of many rural areas.
+
+### Withdrawal and Taliban Takeover (2021)
+
+# Graph on casualties
+
+```{r}
+pacman::p_load(sf)
+pacman::p_load(leaflet)
+pacman::p_load(dplyr)
+
+library(sf)
+library(leaflet)
+library(dplyr)
+
+
+gadm_data <- st_read("Data/gadm41_AFG_2.json", quiet = TRUE) 
+
+
+conflict_data <- read.csv("Data/GEDEvent_v24_2.csv") %>%
+  filter(
+    !is.na(longitude) & !is.na(latitude),
+    country == "Afghanistan",
+   
+    year >= 2000 & year <= 2021
+  ) %>%
+  st_as_sf(coords = c("longitude", "latitude"), crs = 4326) %>%
+  mutate(
+    size = sqrt(best) * 2,
+    popup_content = paste(
+      "年份:", year, "<br>",
+      "伤亡人数:", best, "<br>",
+      "地区:", adm_1
+    )
+  )
+
+year_groups <- conflict_data %>%
+  split(.$year)
+
+
+map <- leaflet(gadm_data, options = leafletOptions(minZoom = 6, maxBounds = as.list(st_bbox(gadm_data)))) %>%
+  addTiles() %>%
+  addPolygons(
+    fillColor = "#F0F0F0",
+    weight = 0.5,                
+    color = "purple",          
+    fillOpacity = 0.5,
+    label = ~NAME_1
+  ) %>%
+  setView(lng = 69.11, lat = 34.50, zoom = 6)  
+
+
+names(year_groups) %>%
+  purrr::walk(function(year) {
+    data <- year_groups[[year]]
+    map <<- map %>%
+      addCircleMarkers(
+        data = data,
+        radius = ~size,
+        stroke = FALSE,
+        fillOpacity = 0.7,
+        color = "red",
+        popup = ~popup_content,
+        group = year,
+        clusterOptions = markerClusterOptions(
+          spiderfyDistanceMultiplier = 1.5
+        )
+      )
+  })
+
+
+map <- map %>%
+  addLayersControl(
+    overlayGroups = names(year_groups),
+    options = layersControlOptions(collapsed = FALSE)
+  ) %>%
+  hideGroup(names(year_groups)) %>%  
+  addLegend(
+    position = "bottomright",
+    colors = "red",
+    labels = "Conflicts",
+    opacity = 0.7
+  )
+
+
+map
+```
+
+2001-2008: Invasion；2009-2014: Re-emerge；2015-2021: Withdraw
+
+Made by LI JIONGLIN
+
+## Reflection and Consequences
+
+Duration: 20 years;
+
+Cost: Over \$2 trillion;
+
+U.S. casualties: over 2,400;
+
+Afghan civilian death: over 100,000
+
+The Taliban regained power, U.S. strategic goals were not fully achieved.
+
+# References： {.scrollable}
+
+-   Notre Dame Global Adaptation Initiative (ND-GAIN). (Year). *ND-GAIN Country Index* \[Data set\]. University of Notre Dame. Retrieved from <https://gain.nd.edu/our-work/country-index/download-data/>
+
+<!-- -->
+
+-   United Nations Environment Programme (UNEP). (2007). *Sudan: Post-Conflict Environmental Assessment*. Nairobi: UNEP.https://wedocs.unep.org/20.500.11822/45890
+
+-   Velasco, O.C. Unintended consequences of state action: how the kingpin strategy transformed the structure of violence in Mexico’s organized crime. *Trends Organ Crim* (2023). https://doi.org/10.1007/s12117-023-09498-x
+
+-   Rajapaksha, C. (2024, August). *Understanding Mexico Drug Cartel Violence Dynamics: A Comprehensive Analysis Incorporating Spatiotemporal Patterns and Socioeconomic Influences*. Tdl.org. https://ttu-ir.tdl.org/items/e8d22422-a595-4dbb-992b-a6635de19b3a
+
+# Thank you
